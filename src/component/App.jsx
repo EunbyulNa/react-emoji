@@ -1,38 +1,24 @@
-import React from "react";
-import Card from "./Card";
-import emoji from "../emoji";
+import React, { useState } from "react";
 
-console.log(emoji)
+function App(){
 
-function createCards(emojiTerm){
- return (
- <Card
- key={emojiTerm.id}
- emoji={emojiTerm.emoji}
- name={emojiTerm.name}
- desc={emojiTerm.meaning}
-/>
- )
-}
+  const [counter, setCounter] = useState(0);
 
+  function increase(){
+   setCounter(counter+1);
+  }
 
+  function decrease(){
+    setCounter(counter-1);
+  }
 
-function App() {
   return (
-    <div>
-      <h1>
-        <span>emojipedia</span>
-      </h1>
-
-      <dl className="dictionary">
-
-      {emoji.map(createCards)}
-
-      
-     
-      </dl>
-    </div>
-  );
+  <div className="container">
+    <h1>{counter}</h1>
+    <button onClick={increase}>+</button>
+    <button onClick={decrease}>-</button>
+  </div>
+  )
 }
 
-export default App;
+export default App

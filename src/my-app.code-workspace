@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "../../Desktop/hangman"
+		},
+		{
+			"path": "../../Desktop/shoppingcart"
+		},
+		{
+			"path": "../../Desktop/apiproject"
 		}
 	],
 	"settings": {}
